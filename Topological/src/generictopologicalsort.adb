@@ -24,12 +24,7 @@ package body GenericTopologicalSort is
    procedure TopologicalSort is   
       Precedent, Successor: SortElement;
       Ptr: NodePointer;
-      -- Program to obtain the relations in the partial ordering,
-      -- sort the jobs, and print results;   
-      NA : Integer;
-      numRelations: Integer;
-      F, R, Y: Integer;
-
+      F, R, Y, NA, numRelations: Integer;
    begin 
       
 
@@ -59,7 +54,7 @@ package body GenericTopologicalSort is
             
             Put_Line("Enter the task K in the relation J < K");
             Successor := get(Successor);
-            SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
+            SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1; --Number of jobs Successor is waiting on.
             Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
             SortStructure(SetoInt(Precedent)).Top := Ptr;
          end loop;
@@ -100,9 +95,11 @@ package body GenericTopologicalSort is
          else
             new_line;
             Put_Line("Failed to complete a solution!");
-            --for K in 1..NA loop
-            -- SortStructure(K).Count := 0;
-            --end loop;
+            Put_Line("Loop detected.");
+            for K in 1..NA loop
+               SortStructure(K).Count := 0;
+            end loop;
+            
             --6
             for K in 1..NA loop
                Ptr := SortStructure(K).Top;
@@ -127,7 +124,7 @@ package body GenericTopologicalSort is
             --8
   
             loop
-               SortStructure(Y).Top := Integer_To_Ptr(1);
+               SortStructure(Y).Top := Integer_To_Ptr(0);
                Y := SortStructure(Y).Count;
                exit when SortStructure(Y).top /= Integer_To_Ptr(0);
             end loop;

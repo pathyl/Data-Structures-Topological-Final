@@ -25,7 +25,7 @@ RV NO_IMPLICIT_LOOPS
 RV STATIC_DISPATCH_TABLES
 RV SPARK_05
 
-U main%b		main.adb		2b2e3be1 NE OO SU
+U main%b		main.adb		8f7480a9 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
@@ -61,10 +61,10 @@ D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D generictopologicalsort.ads  20191020172936 52ff06c5 generictopologicalsort%s
-D generictopologicalsort.adb  20191020224958 4f90744e generictopologicalsort%b
+D generictopologicalsort.adb  20191020231856 15a9c9d7 generictopologicalsort%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20191020215828 361e0f02 main%b
+D main.adb		20191020230824 9244b44a main%b
 D myio.ads		20191020183738 e13be74b myio%s
 D system.ads		20190518041258 32a08138 system%s
 D s-addima.ads		20190518041256 a1ec9d3a system.address_image%s
@@ -92,7 +92,6 @@ X 1 ada.ads
 16K9*Ada 20e8 20|1r6 2r5
 X 11 a-textio.ads
 57K13*Text_IO 727e16 20|1w10 2r9
-508U14*Put_Line 20|11s4
 X 16 generictopologicalsort.ads
 8k9*GenericTopologicalSort 11e27 20|3w6 7r37
 9U14 TopologicalSort 20|12s22[7]

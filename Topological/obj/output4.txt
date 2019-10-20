@@ -12,13 +12,5 @@ Enter the task J in the relation J < K
 Enter the task K in the relation J < K
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
-Enter the task J in the relation J < K
-Enter the task K in the relation J < K
-          1          6          2
-Failed to complete a solution!
-Y is:
-          2
-Y is:
-          3
-Printing offending loop
-          3          5          4
+          1          6          2          3          4          5
+Completed a solution!
