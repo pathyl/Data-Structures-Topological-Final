@@ -15,7 +15,7 @@ package body GenericTopologicalSort is
       Top: NodePointer;
    end record;
 
-   SortStructure: Array(Integer range <>) of JobElement; 
+   --SortStructure: Array(Integer range <>) of JobElement; 
    -- other declarations
    procedure TopologicalSort(NA: in Integer) is      
       -- Program to obtain the relations in the partial ordering,

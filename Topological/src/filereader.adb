@@ -9,7 +9,7 @@ package body FileReader is
       LineCount : Integer := 0;
       --Q: ParentPtr := new IntegerType'(null, -1);
       i : Integer := 1;
-      J: IntegerType;
+      J: ParentPtr;
    begin
       Ada.Text_IO.Open(File => f1,
                        Mode => In_File,
@@ -29,7 +29,7 @@ package body FileReader is
       
       for i in 1..NumItems loop
          J := Arr(i);
-         Put_Line(J.integerValue'Image);
+         Put_Line(J.all.integerValue'Image);
       end loop;
       
       
@@ -37,7 +37,7 @@ package body FileReader is
    end ReadLines;
    
   function NumItems return Integer is
-            f1 : File_Type;
+      f1 : File_Type;
       inputFile : String := "input.txt";
       LineCount : Integer := 0;
    begin

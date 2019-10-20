@@ -17,7 +17,7 @@ RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		1bdd8ae0 NE OO SU
+U main%b		main.adb		50c7b87a NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -40,8 +40,8 @@ D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D filereader.ads	20191020001556 deaa9770 filereader%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20191020001918 dbc24032 main%b
-D mytypes.ads		20191020001918 b04188cf mytypes%s
+D main.adb		20191020013530 cccb1b52 main%b
+D mytypes.ads		20191020013800 ec52e135 mytypes%s
 D system.ads		20190518041258 32a08138 system%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
@@ -66,23 +66,24 @@ G r c none [main standard 7 11 none] [numitems filereader 9 13 none]
 G r s mytypearray [main standard 7 11 none] [mytypearrayIP mytypes 14 9 none]
 G r c none [main standard 7 11 none] [readlines filereader 8 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|1r6 2r5 13r27
+16K9*Ada 20e8 15|1r6 2r5 14r27
 X 7 a-textio.ads
-57K13*Text_IO 727e16 15|1w10 2r9 13r31
-508U14*Put_Line 15|19s4
+57K13*Text_IO 727e16 15|1w10 2r9 14r31
+508U14*Put_Line 15|20s4
 X 9 a-tiinio.ads
-46k21*Integer_IO 108e27 15|13r39
+46k21*Integer_IO 108e27 15|14r39
 X 12 filereader.ads
-6K9*FileReader 10e15 15|4w6 9r24 20r4
-8U14*ReadLines 15|20s15
-9V13*NumItems{integer} 15|9s35
+6K9*FileReader 10e15 15|4w6 8r24 22r4
+8U14*ReadLines 15|22s15
+9V13*NumItems{integer} 15|8s35
 X 15 main.adb
-7U11*Main 7b11 21l5 21t9
-9a4 Arr{16|14A9} 20m25 20r25
-13K10 IntegerIO[9|46]
+7U11*Main 7b11 23l5 23t9
+8a4 Arr{16|14A9} 22m25 22r25
+9a4 TempArr(integer) 21m4
+14K10 IntegerIO[9|46]
 X 16 mytypes.ads
-1K9*MyTypes 15|5w6 6r5 16|18e12
+1K9*MyTypes 15|5w6 6r5 16|19e12
 4P9*ParentPtr(5R9)
 5R9*Parent
-14A9*MyTypeArray(4P9)<integer> 15|9r9
+14A9*MyTypeArray(4P9)<integer> 15|8r9
 

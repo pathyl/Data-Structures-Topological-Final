@@ -14,5 +14,6 @@ package MyTypes is
    type MyTypeArray is array(integer range <>) of ParentPtr;
    function get(Job:  out Integer) return ParentPtr;
    procedure put(Job:  in Integer);
+   function getIntegerValue(obj: in out IntegerType)  return Integer;
 
 end MyTypes;

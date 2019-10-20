@@ -1,2 +1,1 @@
-filereader.adb:31:15: expected type "IntegerType" defined at mytypes.ads:9
-filereader.adb:31:15: found type "ParentPtr" defined at mytypes.ads:4
+filereader.adb:32:24: no selector "integerValue" for type "Parent'Class" defined at mytypes.ads:3
