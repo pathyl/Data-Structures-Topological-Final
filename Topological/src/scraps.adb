@@ -42,3 +42,18 @@ end if;
       elsif Which_Type = "name" then
          NameConstructor(Object);
       end if;
+
+
+
+      --6
+      for K in 1..NA loop
+         Ptr := SortStructure(K).Top;
+         SortStructure(K).Top := Integer_To_Ptr(0);
+         while Ptr /= Integer_To_Ptr(0) and SortStructure(SEtoint(Ptr.all.Suc)).Count = 0 loop
+            SortStructure(SEtoint(Ptr.all.Suc)).Count := K;
+            if Ptr /= Integer_To_Ptr(0) then
+               Ptr := Ptr.Next;
+            end if;
+         end loop;
+      end loop;
+      

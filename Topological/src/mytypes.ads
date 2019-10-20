@@ -12,6 +12,7 @@ package MyTypes is
       end record;
 
    type MyTypeArray is array(integer range <>) of ParentPtr;
+   type MyArrayType is array(integer range <>) of integer;
    function get(Job:  out Integer) return ParentPtr;
    procedure put(Job:  in Integer);
    function getIntegerValue(obj: in out IntegerType)  return Integer;

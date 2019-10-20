@@ -21,7 +21,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U mytypes%b		mytypes.adb		727e48d5 OO PK IL
+U mytypes%b		mytypes.adb		1281634d OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.containers.vectors%s
@@ -30,7 +30,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
 Z ada.text_io.integer_io%s
 
-U mytypes%s		mytypes.ads		ec52e135 EE OO PF PK IL
+U mytypes%s		mytypes.ads		8cadcaad EE OO PF PK IL
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -63,7 +63,7 @@ D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mytypes.ads		20191020011258 ec52e135 mytypes%s
+D mytypes.ads		20191020154430 8cadcaad mytypes%s
 D mytypes.adb		20191020010954 4ef37352 mytypes%b
 D system.ads		20190518041258 32a08138 system%s
 D s-atocou.ads		20190518041258 b45c2d8d system.atomic_counters%s
@@ -91,13 +91,14 @@ G a e
 G c Z s s [parentDA mytypes 5 9 none]
 G c Z s s [parentDF mytypes 5 9 none]
 G c Z s s [parentIP mytypes 5 9 none]
-G c Z s b [get mytypes 15 13 none]
-G c Z s b [put mytypes 16 14 none]
-G c Z s b [getintegervalue mytypes 17 13 none]
+G c Z s b [get mytypes 16 13 none]
+G c Z s b [put mytypes 17 14 none]
+G c Z s b [getintegervalue mytypes 18 13 none]
 G c Z s s [integertypeDA mytypes 9 9 none]
 G c Z s s [integertypeDF mytypes 9 9 none]
 G c Z s s [integertypeIP mytypes 9 9 none]
 G c Z s s [mytypearrayIP mytypes 14 9 none]
+G c Z s s [myarraytypeIP mytypes 15 9 none]
 G c Z b b [get mytypes__integerio 51 14 8_4]
 G c Z b b [get mytypes__integerio 59 14 8_4]
 G c Z b b [put mytypes__integerio 68 14 8_4]
@@ -120,20 +121,21 @@ X 15 a-tiinio.ads
 46k21*Integer_IO 108e27 22|8r41
 80U14*Put 22|19s17[8]
 X 21 mytypes.ads
-1K9*MyTypes 19l5 19e12 22|4b14 27l5 27t12
+1K9*MyTypes 20l5 20e12 22|4b14 27l5 27t12
 3R9*Parent 4r33 5c9 7e14 9r28
-4P9*ParentPtr(5R9) 6r13 14r51 15r43 22|10r43
+4P9*ParentPtr(5R9) 6r13 14r51 16r43 22|10r43
 5R9*Parent
 6p7*next{4P9}
-9R9*IntegerType<5R9> 12e17 17p13 17r41 22|22r41
+9R9*IntegerType<5R9> 12e17 18p13 18r41 22|22r41
 11i10*integerValue{integer} 22|24r18
 14A9*MyTypeArray(4P9)<integer>
-15V13*get{4P9} 15<17 22|10b13 15l8 15t11
-15i17 Job{integer} 22|10b17
-16U14*put 16>18 22|17b14 20l8 20t11
-16i18 Job{integer} 22|17b18 19r21
-17V13*getIntegerValue{integer} 17=29 22|22b13 25l8 25t23
-17r29 obj{9R9} 22|22b29 24r14
+15A9*MyArrayType(integer)<integer>
+16V13*get{4P9} 16<17 22|10b13 15l8 15t11
+16i17 Job{integer} 22|10b17
+17U14*put 17>18 22|17b14 20l8 20t11
+17i18 Job{integer} 22|17b18 19r21
+18V13*getIntegerValue{integer} 18=29 22|22b13 25l8 25t23
+18r29 obj{9R9} 22|22b29 24r14
 X 22 mytypes.adb
 8K12 IntegerIO[15|46] 19r7
 X 23 system.ads

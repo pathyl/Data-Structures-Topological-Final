@@ -6,43 +6,72 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_ALLOCATORS
 RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV STATIC_DISPATCH_TABLES
 RV SPARK_05
 
-U main%b		main.adb		50c7b87a NE OO SU
+U main%b		main.adb		8bfce4d7 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
 Z ada.text_io.integer_io%s
-W filereader%s		filereader.adb		filereader.ali
+Z ada.unchecked_conversion%s
+W generictopologicalsort%s  generictopologicalsort.adb  generictopologicalsort.ali
+W myio%s		myio.adb		myio.ali
 W mytypes%s		mytypes.adb		mytypes.ali
+Z system%s		system.ads		system.ali
+Z system.address_image%s  s-addima.adb		s-addima.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 
 D ada.ads		20190518041256 76789da1 ada%s
+D a-charac.ads		20190518041256 2d3ec45b ada.characters%s
+D a-chlat1.ads		20190518041256 66457d31 ada.characters.latin_1%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
 D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
 D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-string.ads		20190518041256 90ac6797 ada.strings%s
+D a-strfix.ads		20190518041258 86d6bc21 ada.strings.fixed%s
+D a-strmap.ads		20190518041256 e8bb714a ada.strings.maps%s
 D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiinau.ads		20190518041256 8114c8e4 ada.text_io.integer_aux%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D filereader.ads	20191020001556 deaa9770 filereader%s
+D generictopologicalsort.ads  20191020172936 52ff06c5 generictopologicalsort%s
+D generictopologicalsort.adb  20191020195130 9bbb857a generictopologicalsort%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20191020013530 cccb1b52 main%b
-D mytypes.ads		20191020013800 ec52e135 mytypes%s
+D main.adb		20191020183624 1a611a99 main%b
+D myio.ads		20191020183738 e13be74b myio%s
+D mytypes.ads		20191020154430 8cadcaad mytypes%s
 D system.ads		20190518041258 32a08138 system%s
+D s-addima.ads		20190518041256 a1ec9d3a system.address_image%s
+D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
@@ -55,35 +84,36 @@ D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
 D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
 D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
 D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20190518041256 b16154c2 system.storage_pools%s
 D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
 D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 G a e
-G c Z b b [main standard 7 11 none]
-G r c none [main standard 7 11 none] [numitems filereader 9 13 none]
-G r s mytypearray [main standard 7 11 none] [mytypearrayIP mytypes 14 9 none]
-G r c none [main standard 7 11 none] [readlines filereader 8 14 none]
+G c Z b b [main standard 8 11 none]
+G r i none [main standard 8 11 none] [generictopologicalsort standard 8 9 none]
+G r c none [main standard 8 11 none] [myget myio 3 13 none]
+G r c none [main standard 8 11 none] [myput myio 4 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|1r6 2r5 14r27
-X 7 a-textio.ads
-57K13*Text_IO 727e16 15|1w10 2r9 14r31
-508U14*Put_Line 15|20s4
-X 9 a-tiinio.ads
-46k21*Integer_IO 108e27 15|14r39
-X 12 filereader.ads
-6K9*FileReader 10e15 15|4w6 8r24 22r4
-8U14*ReadLines 15|22s15
-9V13*NumItems{integer} 15|8s35
-X 15 main.adb
-7U11*Main 7b11 23l5 23t9
-8a4 Arr{16|14A9} 22m25 22r25
-9a4 TempArr(integer) 21m4
-14K10 IntegerIO[9|46]
-X 16 mytypes.ads
-1K9*MyTypes 15|5w6 6r5 16|19e12
-4P9*ParentPtr(5R9)
+16K9*Ada 20e8 21|1r6 2r5 16r27
+X 12 a-textio.ads
+57K13*Text_IO 727e16 21|1w10 2r9 16r31
+508U14*Put_Line 21|23s4
+X 14 a-tiinio.ads
+46k21*Integer_IO 108e27 21|16r39
+X 17 generictopologicalsort.ads
+8k9*GenericTopologicalSort 11e27 21|3w6 19r37
+9U14 TopologicalSort 21|25s22[19]
+X 21 main.adb
+8U11*Main 8b11 26l5 26t9
+16K10 IntegerIO[14|46]
+19K12 MyTopologicalSort[17|8] 25r4
+X 22 myio.ads
+2K9*MyIO 21|7w6 19r69 19r81 22|6e9
+3V13*MyGet{integer} 21|19r74
+4U14*MyPut 21|19r86
+X 23 mytypes.ads
+1K9*MyTypes 21|5w6 6r5 23|20e12
 5R9*Parent
-14A9*MyTypeArray(4P9)<integer> 15|8r9
 

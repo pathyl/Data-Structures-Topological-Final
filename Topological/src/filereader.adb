@@ -3,13 +3,11 @@
 package body FileReader is
 
 
-   procedure ReadLines(Arr: in out MyTypeArray) is
+   procedure ReadLines(Arr: in out MyArrayType) is
       f1 : File_Type;
       inputFile : String := "input.txt";
       LineCount : Integer := 0;
-      --Q: ParentPtr := new IntegerType'(null, -1);
-      i : Integer := 1;
-      J: ParentPtr;
+
    begin
       Ada.Text_IO.Open(File => f1,
                        Mode => In_File,

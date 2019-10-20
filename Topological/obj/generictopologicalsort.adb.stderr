@@ -1,2 +1,0 @@
-generictopologicalsort.adb:18:19: unconstrained subtype not allowed (need initialization)
-generictopologicalsort.adb:18:19: provide initial value or explicit array bounds

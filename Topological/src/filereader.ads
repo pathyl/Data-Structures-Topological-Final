@@ -5,6 +5,6 @@ use mytypes;
 
 package FileReader is
 
-   procedure ReadLines(Arr: in out MyTypeArray);
+   procedure ReadLines(Arr: in out MyArrayType);
    function NumItems return Integer;
 end FileReader;
