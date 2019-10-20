@@ -1,0 +1,22 @@
+[MAPPING FILE]
+C:\Users\patri\AppData\Local\Temp\GNAT-TEMP-000003.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2019
+[MAIN BASE NAME]
+generictopologicalsort
+[COMPILER PATH]
+c:\gnat\2019\bin\gcc.exe
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+[MAIN DEPENDENCY FILE]
+C:\Users\patri\Data-Structures-Topological-C\Topological\obj\generictopologicalsort.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=
+[PROJECT FILES]
+C:\Users\patri\Data-Structures-Topological-C\Topological\topological.gpr
+20191015183110

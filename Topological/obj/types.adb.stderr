@@ -1,0 +1,12 @@
+types.adb:23:16: no candidate interpretations match the actuals:
+types.adb:23:16: missing argument for parameter "Item" in call to "put" declared at a-tiinio.ads:97, instance at line 19
+types.adb:23:16: missing argument for parameter "Item" in call to "put" declared at a-tiinio.ads:68, instance at line 19
+types.adb:23:21: expected type "Standard.Integer"
+types.adb:23:21: found type "IntegerType" defined at types.ads:34
+types.adb:23:21:   ==> in call to "Put" at a-tiinio.ads:80, instance at line 19
+types.adb:28:12: no candidate interpretations match the actuals:
+types.adb:28:12: missing argument for parameter "Item" in call to "put" declared at a-tienio.ads:69, instance at line 18
+types.adb:28:12: missing argument for parameter "Item" in call to "put" declared at a-tienio.ads:40, instance at line 18
+types.adb:28:17: expected type "CarBrandEnum" defined at types.ads:27
+types.adb:28:17: found type "Car" defined at types.ads:29
+types.adb:28:17:   ==> in call to "Put" at a-tienio.ads:52, instance at line 18

@@ -1,0 +1,2 @@
+filereader.adb:31:15: expected type "IntegerType" defined at mytypes.ads:9
+filereader.adb:31:15: found type "ParentPtr" defined at mytypes.ads:4

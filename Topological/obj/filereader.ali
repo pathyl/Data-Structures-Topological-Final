@@ -1,0 +1,101 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV SPARK_05
+
+U filereader%b		filereader.adb		6eb7b4c2 NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W mytypes%s		mytypes.adb		mytypes.ali
+Z system%s		system.ads		system.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+U filereader%s		filereader.ads		8894c998 EE NE OO PK
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D filereader.ads	20191019222110 8894c998 filereader%s
+D filereader.adb	20191020000326 f479e9e4 filereader%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D mytypes.ads		20191020000222 bcae41d3 mytypes%s
+D system.ads		20190518041258 32a08138 system%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041256 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041256 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041256 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041256 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-valint.ads		20190518041256 b5ff6963 system.val_int%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [readlines filereader 3 14 none]
+G r s parent [readlines filereader 3 14 none] [parentIP mytypes 5 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 2r5 16r7 40r4
+X 7 a-textio.ads
+57K13*Text_IO 727e16 10|1w10 2r9 16r11 40r8
+64P9*File_Type 10|10r12
+66n23*In_File{66E9} 10|17r32
+114U14*Open 10|16s19
+115p7 File{64P9} 10|16r24
+116e7 Mode{66E9} 10|17r24
+117a7 Name{string} 10|18r24
+129U14*Close 10|40s16
+312V13*End_Of_File{boolean} 10|20s17 28s17
+492V13*Get_Line{string} 10|22s38 30s37
+X 9 filereader.ads
+1K9*FileReader 4l5 4e15 10|7b14 43l5 43t15
+3U14*ReadLines 10|9b14 41l5 41t14
+X 10 filereader.adb
+10p7 f1{7|64P9} 16m32 16r32 20r29 22r47 28r29 30r46 40m22 40r22
+11a7 inputFile{string} 18r32
+12i7 LineCount{integer} 24m13 24r26 31r27
+14i7 i{integer} 35r17 36m13 36r18
+22a13 Current_Line{string}
+30a13 Current_Line{string} 34r61
+31a13 Arr(13|4P9) 35m13
+32p13 P{13|4P9} 34m13 35r23
+X 13 mytypes.ads
+1K9*MyTypes 10|3w6 4r5 13|17e12
+3R9*Parent 10|34r35 13|7e14
+4P9*ParentPtr(5R9) 10|31r41 32r17
+5R9*Parent
+9R9*IntegerType<5R9> 10|34r22 13|12e17
+

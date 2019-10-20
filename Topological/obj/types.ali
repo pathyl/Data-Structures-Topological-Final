@@ -1,0 +1,274 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U types%b		types.adb		65947ed8 OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.enumeration_aux%s  a-tienau.adb	a-tienau.ali
+Z ada.text_io.enumeration_io%s
+Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+Z ada.text_io.integer_io%s
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
+W ada.unchecked_deallocation%s
+Z interfaces%s		interfac.ads		interfac.ali
+Z system%s		system.ads		system.ali
+Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_enum%s	s-valenu.adb		s-valenu.ali
+
+U types%s		types.ads		44be5387 EE OO PF PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-charac.ads		20190518041256 2d3ec45b ada.characters%s
+D a-chlat1.ads		20190518041256 66457d31 ada.characters.latin_1%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-string.ads		20190518041256 90ac6797 ada.strings%s
+D a-strfix.ads		20190518041258 86d6bc21 ada.strings.fixed%s
+D a-strmap.ads		20190518041256 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20190518041256 1656705b ada.strings.unbounded%s
+D a-suteio.ads		20190518041256 26d8e9aa ada.strings.unbounded.text_io%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-tienau.ads		20190518041256 6a9c157b ada.text_io.enumeration_aux%s
+D a-tienio.ads		20190518041256 2e79c9bf ada.text_io.enumeration_io%s
+D a-tienio.adb		20190518041256 c9e6b5af ada.text_io.enumeration_io%b
+D a-tiinau.ads		20190518041256 8114c8e4 ada.text_io.integer_aux%s
+D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
+D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
+D a-tiunio.ads		20190518041258 759c6b0c ada.text_io.unbounded_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041258 32a08138 system%s
+D s-atocou.ads		20190518041258 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041256 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-imenne.ads		20190518041256 614c06c0 system.img_enum_new%s
+D s-memory.ads		20190518041256 597d6634 system.memory%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stalib.adb		20190518041256 f2fe2716 system.standard_library%b
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041256 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041256 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-valenu.ads		20190518041258 6201ebfb system.val_enum%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D types.ads		20191019200040 52e823dc types%s
+D types.adb		20191019201346 93674c3d types%b
+G a e
+G c Z s s [parentDA types 8 9 none]
+G c Z s s [parentDF types 8 9 none]
+G c Z s s [parentIP types 8 9 none]
+G c Z s b [temp types 38 14 none]
+G c Z s b [identify types 39 14 none]
+G c Z s b [foodconstructor types 40 13 none]
+G c Z s s [foodDA types 12 9 none]
+G c Z s s [foodDF types 12 9 none]
+G c Z s s [foodIP types 12 9 none]
+G c Z s s [personDA types 21 9 none]
+G c Z s s [personDF types 21 9 none]
+G c Z s s [personIP types 21 9 none]
+G c Z s s [carDA types 29 9 none]
+G c Z s s [carDF types 29 9 none]
+G c Z s s [carIP types 29 9 none]
+G c Z s s [integertypeDA types 34 9 none]
+G c Z s s [integertypeDF types 34 9 none]
+G c Z s s [integertypeIP types 34 9 none]
+G c Z b b [free types 13 14 none]
+G c Z b b [get types__nameio 31 14 15_4]
+G c Z b b [get types__nameio 34 14 15_4]
+G c Z b b [put types__nameio 40 14 15_4]
+G c Z b b [put types__nameio 52 14 15_4]
+G c Z b b [get types__nameio 62 14 15_4]
+G c Z b b [put types__nameio 69 14 15_4]
+G c Z b b [get types__fruitio 31 14 16_4]
+G c Z b b [get types__fruitio 34 14 16_4]
+G c Z b b [put types__fruitio 40 14 16_4]
+G c Z b b [put types__fruitio 52 14 16_4]
+G c Z b b [get types__fruitio 62 14 16_4]
+G c Z b b [put types__fruitio 69 14 16_4]
+G c Z b b [get types__personio 31 14 17_4]
+G c Z b b [get types__personio 34 14 17_4]
+G c Z b b [put types__personio 40 14 17_4]
+G c Z b b [put types__personio 52 14 17_4]
+G c Z b b [get types__personio 62 14 17_4]
+G c Z b b [put types__personio 69 14 17_4]
+G c Z b b [get types__cario 31 14 18_4]
+G c Z b b [get types__cario 34 14 18_4]
+G c Z b b [put types__cario 40 14 18_4]
+G c Z b b [put types__cario 52 14 18_4]
+G c Z b b [get types__cario 62 14 18_4]
+G c Z b b [put types__cario 69 14 18_4]
+G c Z b b [get types__integerio 51 14 19_4]
+G c Z b b [get types__integerio 59 14 19_4]
+G c Z b b [put types__integerio 68 14 19_4]
+G c Z b b [put types__integerio 80 14 19_4]
+G c Z b b [get types__integerio 90 14 19_4]
+G c Z b b [put types__integerio 97 14 19_4]
+G c Z b b [put types 21 14 none]
+G c Z b b [put types 26 17 none]
+G c Z b b [put types 31 17 none]
+G c Z b b [put types 36 17 none]
+G c Z b b [put types 41 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 50|2r6 3r5 51|1r6 2r5 3r6 4r6 5r5 6r6 7r5 8r6 13r26 15r26 16r27
+. 17r28 18r25 19r29
+X 8 a-string.ads
+16K13*Strings 35e16 50|2r10 3r9 51|3r10 4r10 5r9
+X 9 a-strfix.ads
+43K21*Fixed 596e22 51|3w18
+X 11 a-strunb.ads
+82K21*Unbounded 756e26 50|2w18 3r17 51|4w18 5r17
+87R9*Unbounded_String<5|43R9> 739e14 50|39r38 40r44 51|52r38 54r19 74r44
+116V13*To_String{string} 51|53s23
+216V13*Unbounded_Slice{87R9} 51|61s27 62s23
+X 14 a-textio.ads
+57K13*Text_IO 727e16 51|1w10 2r9 6r10 7r9 15r30 16r31 17r32 18r29 19r33
+508U14*Put_Line 51|23s7 28s7 33s7 38s7 43s7 57s7 67s7 77s7
+X 16 a-tienio.ads
+26k21*Enumeration_IO 76e31 51|15r38 16r39 17r40 18r37
+X 19 a-tiinio.ads
+46k21*Integer_IO 108e27 51|19r41
+X 21 a-tiunio.ads
+25K21*Unbounded_IO 61e29 51|6w18 7r17
+41U14*Put_Line=43:42 51|58s7 68s7
+X 23 a-uncdea.ads
+20u15*Unchecked_Deallocation 51|8w10 13r30
+X 26 system.ads
+67M9*Address
+X 34 s-memory.ads
+53V13*Alloc{26|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{26|67M9} 105i<c,__gnat_realloc>22
+X 40 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 50 types.ads
+4K9*types 41l5 41e10 51|10b14 84l5 84t10
+6R9*Parent 7r29 8c9 10e14 12r21 21r23 29r20 34r28 51|13r53
+7P9*ParentPtr(6R9) 9r13 51|13r61
+8R9*Parent
+9p7*next{7P9}
+11E9*fruitEnum 11e51 14r20 51|16r54
+11n23*apple{11E9}
+11n30*banana{11E9}
+11n38*orange{11E9}
+11n46*pear{11E9}
+12R9*Food<8R9> 16e17 40p13 40r69 51|31r30 74r69 75r16
+14e10*foodType{11E9}
+15f10*calories{float}
+17E9*NameType 17e67 51|15r53 41r27
+17n22*Mary{17E9}
+17n28*Joe{17E9}
+17n33*Tom{17E9}
+17n38*Bob{17E9}
+17n43*Sara{17E9}
+17n49*Julie{17E9}
+17n56*Larry{17E9}
+17n63*Sam{17E9}
+18E9*nameEnum 18e51 23r16 51|17r55
+18n22*Bennett{18E9}
+18n31*Burris{18E9}
+18n39*Cooper{18E9}
+18n47*Joe{18E9}
+19E9*classEnum 19e49 24r23
+19n23*warrior{19E9}
+19n32*sorceror{19E9}
+19n42*wizard{19E9}
+21R9*Person<8R9> 25e17 51|36r30
+23e10*name{18E9}
+24e10*personClass{19E9}
+27E9*CarBrandEnum 27e63 31r19 51|18r52
+27n26*GMC{27E9}
+27n31*Chevy{27E9}
+27n38*Ford{27E9}
+27n44*Buick{27E9}
+27n51*Jeep{27E9}
+27n57*Dodge{27E9}
+29R9*Car<8R9> 33e17 51|26r30
+31e10*carType{27E9}
+32i10*numDoors{integer}
+34R9*IntegerType<8R9> 37e17 51|21r27
+36i10*integerValue{integer}
+38U14*temp 51|46b14 50l8 50t12
+39U14*Identify 39=23 51|52b14 72l8 72t16
+39r23 Object{11|87R9} 51|52b23 53r33 58r16 61r43 62m13 62r39 68r16
+40V13*FoodConstructor{12R9} 40=29 51|74b13 80l8 80t23
+40r29 Object{11|87R9} 51|74b29
+X 51 types.adb
+13U14 Free[23|20]
+15K12 NameIO[16|26]
+16K12 FruitIO[16|26]
+17K12 PersonIO[16|26]
+18K12 CarIO[16|26]
+19K12 IntegerIO[19|46]
+21U14 put 21b14 21>18 24t7
+21r18 Job{50|34R9}
+26U17 put 26b17 26>21 29t7
+26r21 Job{50|29R9}
+31U17 put 31b17 31>21 34t7
+31r21 Job{50|12R9}
+36U17 put 36b17 36>21 39t7
+36r21 Job{50|21R9}
+41U14 put 41b14 41>18 44t7
+41e18 Job{50|17E9}
+47i7 x{integer} 49m7
+53a7 Obj{string} 59r16 60r13 62r51
+54r7 Which_Type{11|87R9} 61m13
+59i11 i{integer} 60r17 61r52 62r46
+66L9 Ex 63r18
+75r13 F{50|12R9} 79r14
+
