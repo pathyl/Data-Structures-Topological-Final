@@ -125,10 +125,13 @@ package body GenericTopologicalSort is
          end loop;
          
          --8
-         while SortStructure(Y).Top /= Integer_To_Ptr(0) loop
+  
+         loop
             SortStructure(Y).Top := Integer_To_Ptr(1);
             Y := SortStructure(Y).Count;
+            exit when SortStructure(Y).top /= Integer_To_Ptr(0);
          end loop;
+         
          
          --9 Print the loop
          Put_Line("Printing offending loop");
@@ -137,8 +140,7 @@ package body GenericTopologicalSort is
             SortStructure(Y).Top := Integer_To_Ptr(0);
             Y := SortStructure(Y).Count;
          end loop;
-         
-         
+
          
          
       end;

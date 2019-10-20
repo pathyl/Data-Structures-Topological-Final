@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#8bfce4d7#;
+   u00001 : constant Version_32 := 16#2b2e3be1#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -307,7 +307,7 @@ package ada_main is
    pragma Export (C, u00134, "system__val_unsB");
    u00135 : constant Version_32 := 16#33208002#;
    pragma Export (C, u00135, "system__val_unsS");
-   u00136 : constant Version_32 := 16#effdcd9c#;
+   u00136 : constant Version_32 := 16#b8f92174#;
    pragma Export (C, u00136, "generictopologicalsortB");
    u00137 : constant Version_32 := 16#52ff06c5#;
    pragma Export (C, u00137, "generictopologicalsortS");
@@ -315,38 +315,18 @@ package ada_main is
    pragma Export (C, u00138, "myioB");
    u00139 : constant Version_32 := 16#4fcf3226#;
    pragma Export (C, u00139, "myioS");
-   u00140 : constant Version_32 := 16#1281634d#;
-   pragma Export (C, u00140, "mytypesB");
-   u00141 : constant Version_32 := 16#8cadcaad#;
-   pragma Export (C, u00141, "mytypesS");
-   u00142 : constant Version_32 := 16#d96e3c40#;
-   pragma Export (C, u00142, "system__finalization_mastersB");
-   u00143 : constant Version_32 := 16#695cb8f2#;
-   pragma Export (C, u00143, "system__finalization_mastersS");
-   u00144 : constant Version_32 := 16#7268f812#;
-   pragma Export (C, u00144, "system__img_boolB");
-   u00145 : constant Version_32 := 16#c779f0d3#;
-   pragma Export (C, u00145, "system__img_boolS");
-   u00146 : constant Version_32 := 16#6d4d969a#;
-   pragma Export (C, u00146, "system__storage_poolsB");
-   u00147 : constant Version_32 := 16#114d1f95#;
-   pragma Export (C, u00147, "system__storage_poolsS");
-   u00148 : constant Version_32 := 16#5a895de2#;
-   pragma Export (C, u00148, "system__pool_globalB");
-   u00149 : constant Version_32 := 16#7141203e#;
-   pragma Export (C, u00149, "system__pool_globalS");
-   u00150 : constant Version_32 := 16#e31b7c4e#;
-   pragma Export (C, u00150, "system__memoryB");
-   u00151 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00151, "system__memoryS");
-   u00152 : constant Version_32 := 16#039168f8#;
-   pragma Export (C, u00152, "system__stream_attributesB");
-   u00153 : constant Version_32 := 16#8bc30a4e#;
-   pragma Export (C, u00153, "system__stream_attributesS");
-   u00154 : constant Version_32 := 16#fd83e873#;
-   pragma Export (C, u00154, "system__concat_2B");
-   u00155 : constant Version_32 := 16#300056e8#;
-   pragma Export (C, u00155, "system__concat_2S");
+   u00140 : constant Version_32 := 16#fd83e873#;
+   pragma Export (C, u00140, "system__concat_2B");
+   u00141 : constant Version_32 := 16#300056e8#;
+   pragma Export (C, u00141, "system__concat_2S");
+   u00142 : constant Version_32 := 16#039168f8#;
+   pragma Export (C, u00142, "system__stream_attributesB");
+   u00143 : constant Version_32 := 16#8bc30a4e#;
+   pragma Export (C, u00143, "system__stream_attributesS");
+   u00144 : constant Version_32 := 16#e31b7c4e#;
+   pragma Export (C, u00144, "system__memoryB");
+   u00145 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00145, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -354,8 +334,6 @@ package ada_main is
    --  ada.characters.latin_1%s
    --  interfaces%s
    --  system%s
-   --  system.img_bool%s
-   --  system.img_bool%b
    --  system.img_int%s
    --  system.img_int%b
    --  system.img_lli%s
@@ -479,10 +457,6 @@ package ada_main is
    --  ada.finalization%s
    --  system.file_io%s
    --  system.file_io%b
-   --  system.storage_pools%s
-   --  system.storage_pools%b
-   --  system.finalization_masters%s
-   --  system.finalization_masters%b
    --  system.stream_attributes%s
    --  system.stream_attributes%b
    --  system.val_uns%s
@@ -495,14 +469,10 @@ package ada_main is
    --  ada.text_io.generic_aux%b
    --  ada.text_io.integer_aux%s
    --  ada.text_io.integer_aux%b
-   --  system.pool_global%s
-   --  system.pool_global%b
    --  generictopologicalsort%s
    --  generictopologicalsort%b
    --  myio%s
    --  myio%b
-   --  mytypes%s
-   --  mytypes%b
    --  main%b
    --  END ELABORATION ORDER
 

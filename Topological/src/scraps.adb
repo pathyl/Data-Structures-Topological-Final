@@ -57,3 +57,9 @@ end if;
          end loop;
       end loop;
       
+
+       while SortStructure(Y).Top /= Integer_To_Ptr(0) loop
+            SortStructure(Y).Top := Integer_To_Ptr(1);
+            Y := SortStructure(Y).Count;
+         end loop;
+         
