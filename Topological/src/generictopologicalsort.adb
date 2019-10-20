@@ -47,10 +47,11 @@ package body GenericTopologicalSort is
          
          
          --1 Initialization
-         for K in 1..NA loop
+         for K in 0..NA loop
             SortStructure(K).Count := 0;
             SortStructure(K).Top := null;
          end loop;
+         
          --2 Build The Data Structure
          for J in 1..numRelations loop
             Put_Line("Enter the task J in the relation J < K");
@@ -77,7 +78,7 @@ package body GenericTopologicalSort is
          --4
       
          while F /= 0 loop
-            put(inttoSE(F)); --Perform action F Output it CHANGE THIS
+            put(inttoSE(F)); --Perform action F Output it
             KN := KN - 1;
             Ptr := SortStructure(F).Top;
             SortStructure(F).Top := Integer_To_Ptr(0);
@@ -95,52 +96,56 @@ package body GenericTopologicalSort is
          --5
          if KN = 0 then
             new_line;
-            Put_Line("Found a solution!");
+            Put_Line("Completed a solution!");
          else
             new_line;
-            Put_Line("Failed to find a solution!");
+            Put_Line("Failed to complete a solution!");
+            --for K in 1..NA loop
+            -- SortStructure(K).Count := 0;
+            --end loop;
+            --6
             for K in 1..NA loop
-               SortStructure(K).Count := 0;
+               Ptr := SortStructure(K).Top;
+               SortStructure(K).Top := Integer_To_Ptr(0);
+               while (Ptr /= Integer_To_Ptr(0) and then SortStructure(SEtoint(Ptr.Suc)).Count = 0) loop
+                  SortStructure(SEtoint(Ptr.Suc)).Count := K;
+                  if Ptr /= Integer_To_Ptr(0) then
+                     Ptr := Ptr.Next;
+                  end if;
+               end loop;
             end loop;
+         
+
+            --7 Find a K with Qlink(K) /= 0. This will be part of the offending loop.
+            Y := 1;
+            while SortStructure(Y).Count = 0 loop
+               Y := Y + 1;
+               Put_Line("Y is:"); IntegerIO.put(Y);
+               new_line;
+            end loop;
+         
+            --8
+  
+            loop
+               SortStructure(Y).Top := Integer_To_Ptr(1);
+               Y := SortStructure(Y).Count;
+               exit when SortStructure(Y).top /= Integer_To_Ptr(0);
+            end loop;
+         
+         
+            --9 Print the loop
+            Put_Line("Printing offending loop");
+            while SortStructure(Y).Top /= Integer_To_Ptr(0) loop
+               put(inttoSE(Y)); 
+               SortStructure(Y).Top := Integer_To_Ptr(0);
+               Y := SortStructure(Y).Count;
+            end loop;
+
+            
          end if;
       
          
-         --6
-         for K in 1..NA loop
-            Ptr := SortStructure(K).Top;
-            SortStructure(K).Top := Integer_To_Ptr(0);
-            while (Ptr /= Integer_To_Ptr(0) and then SortStructure(SEtoint(Ptr.Suc)).Count = 0) loop
-               SortStructure(SEtoint(Ptr.Suc)).Count := K;
-               if Ptr /= Integer_To_Ptr(0) then
-                  Ptr := Ptr.Next;
-               end if;
-            end loop;
-         end loop;
-         
-
-         --7 Find a K with Qlink(K) /= 0. This will be part of the offending loop.
-         Y := 1;
-         while SortStructure(Y).Count = 0 loop
-            Y := Y + 1;
-         end loop;
-         
-         --8
-  
-         loop
-            SortStructure(Y).Top := Integer_To_Ptr(1);
-            Y := SortStructure(Y).Count;
-            exit when SortStructure(Y).top /= Integer_To_Ptr(0);
-         end loop;
-         
-         
-         --9 Print the loop
-         Put_Line("Printing offending loop");
-         while SortStructure(Y).Top /= Integer_To_Ptr(0) loop
-            put(inttoSE(Y));
-            SortStructure(Y).Top := Integer_To_Ptr(0);
-            Y := SortStructure(Y).Count;
-         end loop;
-
+       
          
          
       end;

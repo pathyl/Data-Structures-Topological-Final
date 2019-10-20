@@ -8,7 +8,6 @@ procedure Main is
 
 begin
    -- rest of program
-   Put_Line("MAIN");
    MyTopologicalSort.TopologicalSort;
 end Main;
 
