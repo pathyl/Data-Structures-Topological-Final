@@ -24,7 +24,7 @@ package body GenericTopologicalSort is
    procedure TopologicalSort is   
       Precedent, Successor: SortElement;
       Ptr: NodePointer;
-      F, R, Y, NA, numRelations: Integer;
+      F, R, Y, NA, numRelations, dupeCounter: Integer;
       dupe: Boolean := False;
    begin
       
@@ -36,9 +36,9 @@ package body GenericTopologicalSort is
       new_line;
       declare
          SortStructure: Array(0..NA) of JobElement;
-         KN: Integer := numRelations;
+         KN: Integer := NA;
       begin
-         
+         dupeCounter := 0;
          
          --1 Initialization
          for K in 0..NA loop
@@ -59,6 +59,7 @@ package body GenericTopologicalSort is
                if SEtoint(Ptr.Suc) = SEtoint(Successor) then
                   dupe := True;
                   Put_Line("The previously entered relation is a duplicate. Ignoring.");
+                  dupeCounter := dupeCounter + 1;
                end if;
                Ptr := Ptr.Next;
             end loop;
@@ -69,7 +70,7 @@ package body GenericTopologicalSort is
                SortStructure(SetoInt(Precedent)).Top := Ptr;
             end if;
          end loop;
-      
+          -- Don't count the dupes as needed to 
          --3 Initialize the Output Queue
          R := 0;
          SortStructure(0).Count := 0;
