@@ -108,9 +108,9 @@ package body GenericTopologicalSort is
             new_line;
             Put_Line("Failed to complete a solution!");
             Put_Line("Loop detected.");
-            --for K in 1..NA loop
-               --SortStructure(K).Count := 0;
-            --end loop;
+            for K in 1..NA loop
+               SortStructure(K).Count := 0;
+            end loop;
             
             --6
             for K in 1..NA loop

@@ -38,15 +38,3 @@ Attempting to sort
           9          6          4          5          1          3          8          2          7
 Failed to complete a solution!
 Loop detected.
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-Printing offending loop
-          1          3          8          2          7          0          9          6          4          5
