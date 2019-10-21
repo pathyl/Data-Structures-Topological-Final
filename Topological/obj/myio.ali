@@ -38,8 +38,8 @@ D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D myio.ads		20191020183738 e13be74b myio%s
-D myio.adb		20191020183904 e707276c myio%b
+D myio.ads		20191021155642 e13be74b myio%s
+D myio.adb		20191021155642 e707276c myio%b
 D system.ads		20190518041258 32a08138 system%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s

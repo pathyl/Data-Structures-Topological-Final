@@ -54,6 +54,7 @@ package body GenericTopologicalSort is
             
             Put_Line("Enter the task K in the relation J < K");
             Successor := get(Successor);
+            --check for duplicates here
             
             SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
             Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
@@ -98,15 +99,15 @@ package body GenericTopologicalSort is
             new_line;
             Put_Line("Failed to complete a solution!");
             Put_Line("Loop detected.");
-            for K in 1..NA loop
-               SortStructure(K).Count := 0;
-            end loop;
+            --for K in 1..NA loop
+               --SortStructure(K).Count := 0;
+            --end loop;
             
             --6
             for K in 1..NA loop
                Ptr := SortStructure(K).Top;
                SortStructure(K).Top := Integer_To_Ptr(0);
-               while (Ptr /= Integer_To_Ptr(0) and then SortStructure(SEtoint(Ptr.Suc)).Count = 0) loop
+               while (Ptr /= Integer_To_Ptr(0) and then SortStructure(SEtoint(Ptr.Suc)).Count = 0) loop --beware
                   SortStructure(SEtoint(Ptr.Suc)).Count := K;
                   if Ptr /= Integer_To_Ptr(0) then
                      Ptr := Ptr.Next;
@@ -117,14 +118,11 @@ package body GenericTopologicalSort is
 
             --7 Find a K with Qlink(K) /= 0. This will be part of the offending loop.
             Y := 1;
-            while SortStructure(Y).Count = 0 and then Y < NA loop
+            while SortStructure(Y).Count = 0 loop
                Y := Y + 1;
-               Put_Line("Y is:"); IntegerIO.put(Y);
-               new_line;
             end loop;
          
             --8
-  
             loop
                Put_Line("In 8 Loop");
                SortStructure(Y).Top := Integer_To_Ptr(1);
@@ -143,10 +141,6 @@ package body GenericTopologicalSort is
 
             
          end if;
-      
-         
-       
-         
          
       end;
    end TopologicalSort;

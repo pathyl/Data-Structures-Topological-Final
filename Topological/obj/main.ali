@@ -60,12 +60,12 @@ D a-tiinau.ads		20190518041256 8114c8e4 ada.text_io.integer_aux%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D generictopologicalsort.ads  20191020172936 52ff06c5 generictopologicalsort%s
-D generictopologicalsort.adb  20191021001206 c531b703 generictopologicalsort%b
+D generictopologicalsort.ads  20191021155642 52ff06c5 generictopologicalsort%s
+D generictopologicalsort.adb  20191021161758 40b8b1af generictopologicalsort%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20191020230824 9244b44a main%b
-D myio.ads		20191020183738 e13be74b myio%s
+D main.adb		20191021155656 9244b44a main%b
+D myio.ads		20191021155642 e13be74b myio%s
 D system.ads		20190518041258 32a08138 system%s
 D s-addima.ads		20190518041256 a1ec9d3a system.address_image%s
 D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s

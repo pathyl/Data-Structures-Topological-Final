@@ -19,7 +19,7 @@ RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U generictopologicalsort%b  generictopologicalsort.adb  b177ffe5 NE OO PK GE
+U generictopologicalsort%b  generictopologicalsort.adb  34fef949 NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
@@ -45,8 +45,8 @@ D a-tiinau.ads		20190518041256 8114c8e4 ada.text_io.integer_aux%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D generictopologicalsort.ads  20191020172936 52ff06c5 generictopologicalsort%s
-D generictopologicalsort.adb  20191021001206 c531b703 generictopologicalsort%b
+D generictopologicalsort.ads  20191021155642 52ff06c5 generictopologicalsort%s
+D generictopologicalsort.adb  20191021161758 40b8b1af generictopologicalsort%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041258 32a08138 system%s
@@ -72,14 +72,13 @@ X 8 a-strfix.ads
 43K21*Fixed 596e22 17|1w18
 X 11 a-textio.ads
 57K13*Text_IO 727e16 17|2w10 3r9 22r33
-264U14*New_Line 17|34s7 37s7 76s10 95s13 98s13 123s16
+264U14*New_Line 17|34s7 37s7 76s10 95s13 98s13
 465U14*Put 17|32s7 35s7
-508U14*Put_Line 17|52s13 55s13 75s10 96s13 99s13 100s13 122s16 129s16 137s13
-. 142s31
+508U14*Put_Line 17|52s13 55s13 75s10 96s13 99s13 100s13 126s16 134s13
 X 13 a-tiinio.ads
 46k21*Integer_IO 108e27 17|22r41
 59U14 Get 17|33s17[22] 36s17[22]
-80U14 Put 17|122s45[22] 139s26[22] 142s60[22]
+80U14 Put 17|136s26[22]
 X 15 a-unccon.ads
 20v14*Unchecked_Conversion 17|4w10 19r39 20r32 21r32
 X 16 generictopologicalsort.ads
@@ -88,8 +87,8 @@ X 16 generictopologicalsort.ads
 5*22 Job{2+9}
 6U19 put 6>23 17|78s13
 6*23 Job{2+9}
-8k9*GenericTopologicalSort 2z9 5z18 6z19 11l5 11e27 17|5b14 154l5 154t27
-9U14*TopologicalSort 17|24b14 153l8 153t23
+8k9*GenericTopologicalSort 2z9 5z18 6z19 11l5 11e27 17|5b14 146l5 146t27
+9U14*TopologicalSort 17|24b14 145l8 145t23
 X 17 generictopologicalsort.adb
 7R9 Node 8r31 9c9 12e14 59r24
 8P9 NodePointer(7R9) 11r13 16r12 19r69 26r12
@@ -97,32 +96,31 @@ X 17 generictopologicalsort.adb
 11p7 Next{8P9} 59m48 88r27 112r33
 14R9 JobElement 17e14 39r41
 15i7 Count{integer} 46m30 58m47 58r90 65m27 67r33 68m33 72r32 83m48 83r89
-. 84r51 85m36 90r35 102m33 109r89 110m51 120r36 131r38 141r38
-16p7 Top{8P9} 47m30 59r90 60m47 80r37 81m30 107r40 108m33 130m33 132r43 138r36
-. 140m33
-19V13 Integer_To_Ptr[15|20]{8P9} 81s37 82s26 108s40 109s30 111s29 130s40
-. 132s50 138s43 140s40
+. 84r51 85m36 90r35 109r89 110m51 120r36 128r38 138r38
+16p7 Top{8P9} 47m30 59r90 60m47 80r37 81m30 107r40 108m33 127m33 129r43 135r36
+. 137m33
+19V13 Integer_To_Ptr[15|20]{8P9} 81s37 82s26 108s40 109s30 111s29 127s40
+. 129s50 135s43 137s40
 20V13 SEtoint[15|20]{integer} 58s27 58s70 59s70 60s27 83s30 83s71 84s33 85s45
 . 86s24 109s71 110s33
 21V13 inttoSE[15|20]{16|2+9} 78s17
-22K12 IntegerIO[13|46] 33r7 36r7 122r35 139r16 142r50
+22K12 IntegerIO[13|46] 33r7 36r7 136r16
 25*7 Precedent{16|2+9} 53m13 53m30 53r30 59r78 60r35
 25*18 Successor{16|2+9} 56m13 56m30 56r30 58r35 58r78 59r37
 26p7 Ptr{8P9} 59m13 60r54 80m13 82r19 83r38 83r79 84r41 85r53 86r32 88m16
 . 88r23 107m16 109r23 109r79 110r41 111r22 112m22 112r29
 27i7 F{integer} 72m10 77r16 78r25 80r34 81r27 90m13 90r32
 27i10 R{integer} 64m10 68r30 69m16 85r33 86m19
-27i13 Y{integer} 119m13 120r33 120r55 121m16 121r21 122r49 130r30 131m16
-. 131r35 132r40 138r33 139r30 140r30 141m16 141r35 142r64
-27i16 NA{integer} 33m21 39r34 45r22 66r22 101r25 106r25 120r59
+27i13 Y{integer} 119m13 120r33 121m16 121r21 127r30 128m16 128r35 129r40
+. 135r33 136r30 137r30 138m16 138r35
+27i16 NA{integer} 33m21 39r34 45r22 66r22 106r25
 27i20 numRelations{integer} 36m21 40r25 51r22
 39a10 SortStructure(14R9) 46m13 47m13 58m13 58r56 59r56 60m13 65m10 67r16
-. 68m16 72r15 80r20 81m13 83m16 83r57 84r19 85m19 90r18 102m16 107r23 108m16
-. 109r57 110m19 120r19 130m16 131r21 132r26 138r19 140m16 141r21
+. 68m16 72r15 80r20 81m13 83m16 83r57 84r19 85m19 90r18 107r23 108m16 109r57
+. 110m19 120r19 127m16 128r21 129r26 135r19 137m16 138r21
 40i10 KN{integer} 79m13 79r19 94r13
 45i14 K{integer} 46r27 47r27
 51i14 J{integer}
 66i14 K{integer} 67r30 68r42 69r21
-101i17 K{integer} 102r30
 106i17 K{integer} 107r37 108r30 110r60
 
