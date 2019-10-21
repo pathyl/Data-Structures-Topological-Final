@@ -50,24 +50,24 @@ package body GenericTopologicalSort is
          for J in 1..numRelations loop
             Put_Line("Enter the task J in the relation J < K");
             Precedent := get(Precedent); 
-            
             Put_Line("Enter the task K in the relation J < K");
             Successor := get(Successor);
             --check for duplicates here
             Ptr := SortStructure(SEtoint(Precedent)).Top; --check each top for value of successor
+            dupe := False;
              while Ptr /= null loop --find duplicates, don't add them.
                if SEtoint(Ptr.Suc) = SEtoint(Successor) then
                   dupe := True;
-                  Put_Line("Duplicate");
+                  Put_Line("The previously entered relation is a duplicate. Ignoring.");
                end if;
                Ptr := Ptr.Next;
             end loop;
+            
             if dupe = False then                  
                SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
                Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
                SortStructure(SetoInt(Precedent)).Top := Ptr;
             end if;
-            dupe := False;
          end loop;
       
          --3 Initialize the Output Queue

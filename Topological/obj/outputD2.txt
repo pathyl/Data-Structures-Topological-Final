@@ -32,13 +32,13 @@ Enter the task J in the relation J < K
 Enter the task K in the relation J < K
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
-Duplicate
+The previously entered relation is a duplicate. Ignoring.
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
-Duplicate
+The previously entered relation is a duplicate. Ignoring.
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
-Duplicate
+The previously entered relation is a duplicate. Ignoring.
 Attempting to sort
 
 

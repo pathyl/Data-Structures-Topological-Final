@@ -61,7 +61,7 @@ D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D generictopologicalsort.ads  20191021155642 52ff06c5 generictopologicalsort%s
-D generictopologicalsort.adb  20191021172422 728be3f3 generictopologicalsort%b
+D generictopologicalsort.adb  20191021173010 f9d8fceb generictopologicalsort%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D main.adb		20191021155656 9244b44a main%b
