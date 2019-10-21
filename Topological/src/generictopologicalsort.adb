@@ -25,9 +25,8 @@ package body GenericTopologicalSort is
       Precedent, Successor: SortElement;
       Ptr: NodePointer;
       F, R, Y, NA, numRelations: Integer;
-   begin 
-      
-
+      dupe: Boolean := False;
+   begin
       
       Put("Enter the number of jobs to be performed: ");
       IntegerIO.Get(NA);
@@ -55,10 +54,20 @@ package body GenericTopologicalSort is
             Put_Line("Enter the task K in the relation J < K");
             Successor := get(Successor);
             --check for duplicates here
-            
-            SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
-            Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
-            SortStructure(SetoInt(Precedent)).Top := Ptr;
+            Ptr := SortStructure(SEtoint(Precedent)).Top; --check each top for value of successor
+             while Ptr /= null loop --find duplicates, don't add them.
+               if SEtoint(Ptr.Suc) = SEtoint(Successor) then
+                  dupe := True;
+                  Put_Line("Duplicate");
+               end if;
+               Ptr := Ptr.Next;
+            end loop;
+            if dupe = False then                  
+               SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
+               Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
+               SortStructure(SetoInt(Precedent)).Top := Ptr;
+            end if;
+            dupe := False;
          end loop;
       
          --3 Initialize the Output Queue

@@ -32,19 +32,18 @@ Enter the task J in the relation J < K
 Enter the task K in the relation J < K
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
+Duplicate
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
+Duplicate
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
+Duplicate
 Attempting to sort
 
 
 Failed to complete a solution!
 Loop detected.
-Y is:
-          2
-In 8 Loop
-In 8 Loop
 In 8 Loop
 Printing offending loop
-          0
+          1

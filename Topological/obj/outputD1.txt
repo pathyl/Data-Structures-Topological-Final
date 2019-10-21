@@ -26,10 +26,13 @@ Enter the task J in the relation J < K
 Enter the task K in the relation J < K
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
+Duplicate
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
+Duplicate
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
+Duplicate
 Attempting to sort
 
           9          6          4          5          1          3          8          2          7
