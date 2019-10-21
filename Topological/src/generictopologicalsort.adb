@@ -21,19 +21,19 @@ package body GenericTopologicalSort is
    function inttoSE is new Ada.Unchecked_Conversion(Integer, SortElement);
    package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);
    
-   procedure TopologicalSort is   
+   procedure TopologicalSort(inputname, outputname: String) is   
       Precedent, Successor: SortElement;
       Ptr: NodePointer;
       F, R, Y, NA, numRelations: Integer;
       dupe: Boolean := False;
+      f1: File_Type;
    begin
       
-      Put("Enter the number of jobs to be performed: ");
-      IntegerIO.Get(NA);
-      new_line;
-      Put("Enter the number of relations J < K: ");
-      IntegerIO.Get(numRelations);
-      new_line;
+      Ada.Text_IO.Open(File => f1, Mode => In_File, Name => inputname);
+      
+     
+      NA := Get_Line(f1)'Value; --get number of unique jobs to be performed
+      numRelations := Get_Line(f1)'Value; --get number of relations to be read in
       declare
          SortStructure: Array(0..NA) of JobElement;
          KN: Integer := NA;
@@ -47,10 +47,8 @@ package body GenericTopologicalSort is
          
          --2 Build The Data Structure
          for J in 1..numRelations loop
-            Put_Line("Enter the task J in the relation J < K");
-            Precedent := get(Precedent); 
-            Put_Line("Enter the task K in the relation J < K");
-            Successor := get(Successor);
+            -- Relations in the form J<K
+            RelationParser(Precedent, Successor, Get_Line(f1)); -- will change Precedent and Successor based on the line read.
             --check for duplicates here
             --iterate through the nodes in each of Precedent's top to find duplicate Successor before adding.
             Ptr := SortStructure(SEtoint(Precedent)).Top; 
@@ -69,6 +67,8 @@ package body GenericTopologicalSort is
                SortStructure(SetoInt(Precedent)).Top := Ptr;
             end if;
          end loop;
+         
+         Ada.Text_IO.Close(f1); --close the input file.
          
          --3 Initialize the Output Queue
          R := 0;

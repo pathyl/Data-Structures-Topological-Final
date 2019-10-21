@@ -7,21 +7,15 @@ package body MyTypes is
    
    package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);
    
-   function get(Job:  out Integer) return ParentPtr is
+   function RelationParser(Predecessor, Successor: out Parent; Current_Line: String) is
    begin
+      --split the string into two objects
+      --pass each object to identifier, which will in turn pass to constructor and pass back a completed object.
+      --return objects to caller
       
-      Put_Line("GET");
-      return null;
-   end get;
+   end RelationParser;
    
-   procedure put(Job:  in Integer) is
-   begin
-      IntegerIO.Put(Job);
-   end put;
-
-   function getIntegerValue(obj: in out IntegerType) return Integer is
-   begin
-      return obj.integerValue;
-   end getIntegerValue;
+   
+   --polymorhpic put functions for each type
 
 end MyTypes;

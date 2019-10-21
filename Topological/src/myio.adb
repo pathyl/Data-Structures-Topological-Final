@@ -1,6 +1,6 @@
 package body MyIO is
 
-   function MyGet(Job: out Integer) return integer is
+   function MyGet(Job: out Integer) is
       package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);
    begin
       IntegerIO.Get(Job);
