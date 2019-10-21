@@ -20,7 +20,7 @@ package body GenericTopologicalSort is
    function SEtoint is new Ada.Unchecked_Conversion(SortElement, Integer);
    function inttoSE is new Ada.Unchecked_Conversion(Integer, SortElement);
    package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);
-   -- other declarations
+   
    procedure TopologicalSort is   
       Precedent, Successor: SortElement;
       Ptr: NodePointer;
@@ -54,7 +54,8 @@ package body GenericTopologicalSort is
             
             Put_Line("Enter the task K in the relation J < K");
             Successor := get(Successor);
-            SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1; --Number of jobs Successor is waiting on.
+            
+            SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
             Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
             SortStructure(SetoInt(Precedent)).Top := Ptr;
          end loop;
@@ -71,7 +72,8 @@ package body GenericTopologicalSort is
          F := SortStructure(0).Count;
       
          --4
-      
+         Put_Line("Attempting to sort");
+         new_line;
          while F /= 0 loop
             put(inttoSE(F)); --Perform action F Output it
             KN := KN - 1;
@@ -115,7 +117,7 @@ package body GenericTopologicalSort is
 
             --7 Find a K with Qlink(K) /= 0. This will be part of the offending loop.
             Y := 1;
-            while SortStructure(Y).Count = 0 loop
+            while SortStructure(Y).Count = 0 and then Y < NA loop
                Y := Y + 1;
                Put_Line("Y is:"); IntegerIO.put(Y);
                new_line;
@@ -124,7 +126,8 @@ package body GenericTopologicalSort is
             --8
   
             loop
-               SortStructure(Y).Top := Integer_To_Ptr(0);
+               Put_Line("In 8 Loop");
+               SortStructure(Y).Top := Integer_To_Ptr(1);
                Y := SortStructure(Y).Count;
                exit when SortStructure(Y).top /= Integer_To_Ptr(0);
             end loop;
@@ -133,7 +136,7 @@ package body GenericTopologicalSort is
             --9 Print the loop
             Put_Line("Printing offending loop");
             while SortStructure(Y).Top /= Integer_To_Ptr(0) loop
-               put(inttoSE(Y)); 
+               IntegerIO.put(Y); 
                SortStructure(Y).Top := Integer_To_Ptr(0);
                Y := SortStructure(Y).Count;
             end loop;
