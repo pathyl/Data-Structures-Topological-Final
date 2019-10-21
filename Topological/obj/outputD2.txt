@@ -44,11 +44,5 @@ Attempting to sort
 
 Failed to complete a solution!
 Loop detected.
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
 Printing offending loop
           1          4          6          9          7          2

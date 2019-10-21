@@ -55,7 +55,7 @@ package body GenericTopologicalSort is
             --iterate through the nodes in each of Precedent's top to find duplicate Successor before adding.
             Ptr := SortStructure(SEtoint(Precedent)).Top; 
             dupe := False;
-             while Ptr /= null loop --find duplicates, don't add them.
+            while Ptr /= null loop --find duplicates, don't add them.
                if SEtoint(Ptr.Suc) = SEtoint(Successor) then
                   dupe := True;
                   Put_Line("The previously entered relation is a duplicate. Ignoring.");
@@ -63,12 +63,13 @@ package body GenericTopologicalSort is
                Ptr := Ptr.Next;
             end loop;
             
-            if dupe = False then                  
+            if dupe = False then  --only add unique relations.                
                SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
                Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
                SortStructure(SetoInt(Precedent)).Top := Ptr;
             end if;
          end loop;
+         
          --3 Initialize the Output Queue
          R := 0;
          SortStructure(0).Count := 0;
@@ -118,13 +119,12 @@ package body GenericTopologicalSort is
                while Ptr /= Integer_To_Ptr(0) loop-- and then SortStructure(SEtoint(Ptr.Suc)).Count = 0 loop BROKEN BEWARE
                   if SortStructure(SEtoint(Ptr.Suc)).Count = 0 then
                      SortStructure(SEtoint(Ptr.Suc)).Count := K;
-                     end if;
-                  if Ptr /= Integer_To_Ptr(0) then
+                  end if;
+                  if Ptr /= Integer_To_Ptr(0) then --This is part of the algorithm, but this if statement will never be entered.
                      Ptr := Ptr.Next;
                   end if;
                end loop;
             end loop;
-         
 
             --7 Find a K with Qlink(K) /= 0. This will be part of the offending loop.
             Y := 1;
@@ -134,12 +134,10 @@ package body GenericTopologicalSort is
          
             --8
             loop
-               Put_Line("In 8 Loop");
                SortStructure(Y).Top := Integer_To_Ptr(1);
                Y := SortStructure(Y).Count;
                exit when SortStructure(Y).top /= Integer_To_Ptr(0);
             end loop;
-         
          
             --9 Print the loop
             Put_Line("Printing offending loop");
@@ -149,9 +147,7 @@ package body GenericTopologicalSort is
                Y := SortStructure(Y).Count;
             end loop;
 
-            
          end if;
-         
       end;
    end TopologicalSort;
 end GenericTopologicalSort;
