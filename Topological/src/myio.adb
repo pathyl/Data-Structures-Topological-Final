@@ -13,7 +13,6 @@ package body MyIO is
    procedure MyPut(Job: in Integer) is
       package IntegerIO is new Ada.Text_IO.Integer_IO(Integer);
    begin
-   
       IntegerIO.Put(Job);
    end MyPut;
 

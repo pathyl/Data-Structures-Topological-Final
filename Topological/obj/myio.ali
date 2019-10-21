@@ -39,7 +39,7 @@ D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D myio.ads		20191021155642 e13be74b myio%s
-D myio.adb		20191021155642 e707276c myio%b
+D myio.adb		20191021184448 e707276c myio%b
 D system.ads		20190518041258 32a08138 system%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
@@ -63,14 +63,14 @@ X 6 a-textio.ads
 X 8 a-tiinio.ads
 46k21*Integer_IO 108e27 14|6r44 14r44
 59U14 Get 14|8s17[6]
-80U14 Put 14|17s17[14]
+80U14 Put 14|16s17[14]
 X 13 myio.ads
-2K9*MyIO 6l5 6e9 14|1b14 21l5 21t9
+2K9*MyIO 6l5 6e9 14|1b14 20l5 20t9
 3V13*MyGet{integer} 3<19 14|5b13 11l8 11t13
 3i19 Job{integer} 14|5b19 8m21 9r14
-4U14*MyPut 4>20 14|13b14 18l8 18t13
-4i20 Job{integer} 14|13b20 17r21
+4U14*MyPut 4>20 14|13b14 17l8 17t13
+4i20 Job{integer} 14|13b20 16r21
 X 14 myio.adb
 6K15 IntegerIO[8|46] 8r7
-14K15 IntegerIO[8|46] 17r7
+14K15 IntegerIO[8|46] 16r7
 

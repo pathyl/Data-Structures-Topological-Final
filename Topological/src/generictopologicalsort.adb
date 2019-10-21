@@ -24,7 +24,7 @@ package body GenericTopologicalSort is
    procedure TopologicalSort is   
       Precedent, Successor: SortElement;
       Ptr: NodePointer;
-      F, R, Y, NA, numRelations, dupeCounter: Integer;
+      F, R, Y, NA, numRelations: Integer;
       dupe: Boolean := False;
    begin
       
@@ -38,7 +38,6 @@ package body GenericTopologicalSort is
          SortStructure: Array(0..NA) of JobElement;
          KN: Integer := NA;
       begin
-         dupeCounter := 0;
          
          --1 Initialization
          for K in 0..NA loop
@@ -53,13 +52,13 @@ package body GenericTopologicalSort is
             Put_Line("Enter the task K in the relation J < K");
             Successor := get(Successor);
             --check for duplicates here
-            Ptr := SortStructure(SEtoint(Precedent)).Top; --check each top for value of successor
+            --iterate through the nodes in each of Precedent's top to find duplicate Successor before adding.
+            Ptr := SortStructure(SEtoint(Precedent)).Top; 
             dupe := False;
              while Ptr /= null loop --find duplicates, don't add them.
                if SEtoint(Ptr.Suc) = SEtoint(Successor) then
                   dupe := True;
                   Put_Line("The previously entered relation is a duplicate. Ignoring.");
-                  dupeCounter := dupeCounter + 1;
                end if;
                Ptr := Ptr.Next;
             end loop;
@@ -70,7 +69,6 @@ package body GenericTopologicalSort is
                SortStructure(SetoInt(Precedent)).Top := Ptr;
             end if;
          end loop;
-          -- Don't count the dupes as needed to 
          --3 Initialize the Output Queue
          R := 0;
          SortStructure(0).Count := 0;
@@ -117,8 +115,10 @@ package body GenericTopologicalSort is
             for K in 1..NA loop
                Ptr := SortStructure(K).Top;
                SortStructure(K).Top := Integer_To_Ptr(0);
-               while (Ptr /= Integer_To_Ptr(0) and then SortStructure(SEtoint(Ptr.Suc)).Count = 0) loop --beware
-                  SortStructure(SEtoint(Ptr.Suc)).Count := K;
+               while Ptr /= Integer_To_Ptr(0) loop-- and then SortStructure(SEtoint(Ptr.Suc)).Count = 0 loop BROKEN BEWARE
+                  if SortStructure(SEtoint(Ptr.Suc)).Count = 0 then
+                     SortStructure(SEtoint(Ptr.Suc)).Count := K;
+                     end if;
                   if Ptr /= Integer_To_Ptr(0) then
                      Ptr := Ptr.Next;
                   end if;
