@@ -41,6 +41,8 @@ W myio%s		myio.adb		myio.ali
 Z system%s		system.ads		system.ali
 Z system.address_image%s  s-addima.adb		s-addima.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
@@ -62,7 +64,7 @@ D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D generictopologicalsort.ads  20191022003100 345d1f03 generictopologicalsort%s
-D generictopologicalsort.adb  20191022003526 ebb3e48a generictopologicalsort%b
+D generictopologicalsort.adb  20191022012956 bff0b250 generictopologicalsort%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D main.adb		20191022003220 31a54d4e main%b
@@ -70,9 +72,11 @@ D myio.ads		20191022003246 dffdf289 myio%s
 D system.ads		20190518041258 32a08138 system%s
 D s-addima.ads		20190518041256 a1ec9d3a system.address_image%s
 D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
+D s-conca4.ads		20190518041258 7e642b20 system.concat_4%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-imgint.ads		20190518041256 02dbe0c2 system.img_int%s
 D s-parame.ads		20190518041258 48ec542b system.parameters%s
 D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s

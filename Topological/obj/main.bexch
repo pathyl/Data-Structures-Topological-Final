@@ -1,19 +1,19 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\patri\Data-Structures-Topological-C-types\Topological\topological.gpr
+C:\Users\patri\Data-Structures-Topological-C\Topological\topological.gpr
 20191021200110
 [BOUND OBJECT FILES]
-C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\generictopologicalsort.o
-C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\myio.o
-C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\main.o
+C:\Users\patri\Data-Structures-Topological-C\Topological\obj\generictopologicalsort.o
+C:\Users\patri\Data-Structures-Topological-C\Topological\obj\myio.o
+C:\Users\patri\Data-Structures-Topological-C\Topological\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\
--LC:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\
+-LC:\Users\patri\Data-Structures-Topological-C\Topological\obj\
+-LC:\Users\patri\Data-Structures-Topological-C\Topological\obj\
 -LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
 -static
 -static-libgcc

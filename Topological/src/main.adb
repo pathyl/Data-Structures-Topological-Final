@@ -1,5 +1,6 @@
+--in file main.adb
 with Ada.Text_IO;
-use ada.Text_IO;
+use Ada.Text_IO;
 with GenericTopologicalSort;
 with MyIO;
 procedure Main is

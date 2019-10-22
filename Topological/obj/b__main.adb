@@ -238,11 +238,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\generictopologicalsort.o
-   --   C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\myio.o
-   --   C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\main.o
-   --   -LC:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\
-   --   -LC:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\
+   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\generictopologicalsort.o
+   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\myio.o
+   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\main.o
+   --   -LC:\Users\patri\Data-Structures-Topological-C\Topological\obj\
+   --   -LC:\Users\patri\Data-Structures-Topological-C\Topological\obj\
    --   -LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
    --   -static
    --   -lgnat

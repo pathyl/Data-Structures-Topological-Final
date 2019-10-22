@@ -1,4 +1,4 @@
-
+--in file generictopologicalsort.adb
 package body GenericTopologicalSort is
    -- This should read (get) the relations and print (put) the results.
    type Node;
@@ -28,7 +28,9 @@ package body GenericTopologicalSort is
       Ada.Text_IO.Open(File => f2, Mode => Out_File, Name => outputFile);
 
       NA := Integer'Value(Get_Line(f1));
+      Put_Line(f2, "Number of tasks to perform: " & NA'Image);
       numRelations := Integer'Value(Get_Line(f1));
+      Put_Line(f2, "Number of relations to read: " & numRelations'Image);
       
       declare
          SortStructure: Array(0..NA) of JobElement;
@@ -47,17 +49,19 @@ package body GenericTopologicalSort is
             
             --check for duplicates here
             --iterate through the nodes in each of Precedent's top to find duplicate Successor before adding.
+
             Ptr := SortStructure(SEtoint(Precedent)).Top; 
             dupe := False;
             while Ptr /= null loop --find duplicates, don't add them.
                if SEtoint(Ptr.Suc) = SEtoint(Successor) then
                   dupe := True;
-                  Put_Line(f2, "Ignoring duplicate relation.");
+                  Put_Line(f2, "Ignoring duplicate relation: " & SEtoint(Precedent)'Image & " <" & SEtoint(Successor)'Image);
                end if;
                Ptr := Ptr.Next;
             end loop;
             
-            if dupe = False then  --only add unique relations.                
+            if dupe = False then  --only add unique relations.    
+               Put_Line(f2, "Accepted relation input: " & SEtoint(Precedent)'Image & " <" & SEtoint(Successor)'Image);
                SortStructure(SEtoint(Successor)).Count := SortStructure(SEtoint(Successor)).Count + 1;
                Ptr := new Node'(Suc => Successor, Next => SortStructure(SEtoint(Precedent)).Top);
                SortStructure(SetoInt(Precedent)).Top := Ptr;
@@ -98,7 +102,7 @@ package body GenericTopologicalSort is
          --5
          if KN = 0 then
             Put_Line(f2, "");
-            Put_Line(f2, "Found a solution!");
+            Put_Line(f2, "Found a solution! See previous line.");
          else
             Put_Line(f2, "");
             Put_Line(f2, "Failed to complete a solution!");
@@ -135,7 +139,7 @@ package body GenericTopologicalSort is
             end loop;
          
             --9 Print the loop
-            Put_Line(f2, "Printing offending loop");
+            Put_Line(f2, "Printing offending loop in reverse order");
             while SortStructure(Y).Top /= Integer_To_Ptr(0) loop
                IntegerIO.put(f2, Y); 
                SortStructure(Y).Top := Integer_To_Ptr(0);

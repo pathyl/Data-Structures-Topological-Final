@@ -1,6 +1,7 @@
+--in file generictopologicalsort.ads
 with Ada.Strings.Fixed;
 with Ada.Text_IO;
-use ada.Text_IO;
+use Ada.Text_IO;
 with Ada.Unchecked_Conversion;
 generic  -- You may modify this as required but observe the spirit.
    type SortElement is private;  -- An element J (or K) of the partial ordering J < K processed
