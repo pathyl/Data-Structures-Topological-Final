@@ -1,0 +1,8 @@
+myio.adb:12:47: warning: index for "Current_Line" may assume lower bound of 1
+myio.adb:12:47: warning: suggested replacement: "Current_Line'First"
+myio.adb:12:50: warning: index for "Current_Line" may assume lower bound of 1
+myio.adb:12:50: warning: suggested replacement: "Current_Line'First"
+myio.adb:13:47: warning: index for "Current_Line" may assume lower bound of 1
+myio.adb:13:47: warning: suggested replacement: "Current_Line'First + 2"
+myio.adb:13:50: warning: index for "Current_Line" may assume lower bound of 1
+myio.adb:13:50: warning: suggested replacement: "Current_Line'First + 2"

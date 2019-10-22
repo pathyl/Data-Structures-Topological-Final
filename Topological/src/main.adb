@@ -6,6 +6,7 @@ with MyTypes;
 use MyTypes;
 with MyIO;
 procedure Main is
+<<<<<<< Updated upstream
    --Arr: MyTypeArray(1..FileReader.NumItems);
 
    --TempArr: MyArrayType(1..30);
@@ -23,5 +24,10 @@ begin
    Put_Line("MAIN");
    --TempArr := (1,2,1,3,4,1,3,8,8,2,4,2,4,5,6,4,5,7,2,7,9,8,9,6,2,7,4,2,9,8);
    MyTopologicalSort.TopologicalSort;
+=======
+   package MyTopologicalSort is new GenericTopologicalSort(Integer, MyIO.GetJobs, MyIO.MyPut);
+begin
+   MyTopologicalSort.TopologicalSort("inputD1.txt", "outputD1.txt");
+   MyTopologicalSort.TopologicalSort("inputD2.txt", "outputD2.txt");
+>>>>>>> Stashed changes
 end Main;
-

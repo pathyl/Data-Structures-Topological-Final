@@ -1,0 +1,6 @@
+Ignoring duplicate relation.
+Ignoring duplicate relation.
+Ignoring duplicate relation.
+Attempting to sort
+          9          6          4          5          1          3          8          2          7
+Found a solution!

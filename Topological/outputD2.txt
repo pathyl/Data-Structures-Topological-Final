@@ -1,0 +1,9 @@
+Ignoring duplicate relation.
+Ignoring duplicate relation.
+Ignoring duplicate relation.
+Attempting to sort
+
+Failed to complete a solution!
+Loop detected.
+Printing offending loop
+          1          4          6          9          7          2

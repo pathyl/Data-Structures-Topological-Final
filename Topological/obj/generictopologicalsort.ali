@@ -19,16 +19,22 @@ RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
+<<<<<<< Updated upstream
 U generictopologicalsort%b  generictopologicalsort.adb  effdcd9c NE OO PK GE
+=======
+U generictopologicalsort%b  generictopologicalsort.adb  dfeefb89 NE OO PK GE
+>>>>>>> Stashed changes
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+Z ada.text_io.integer_io%s
+
+U generictopologicalsort%s  generictopologicalsort.ads  12e45120 BN EE NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
-Z ada.text_io.integer_io%s
 W ada.unchecked_conversion%s
-
-U generictopologicalsort%s  generictopologicalsort.ads  52ff06c5 BN EE NE OO PK GE IL
 
 D ada.ads		20190518041256 76789da1 ada%s
 D a-charac.ads		20190518041256 2d3ec45b ada.characters%s
@@ -45,8 +51,13 @@ D a-tiinau.ads		20190518041256 8114c8e4 ada.text_io.integer_aux%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+<<<<<<< Updated upstream
 D generictopologicalsort.ads  20191020172936 52ff06c5 generictopologicalsort%s
 D generictopologicalsort.adb  20191020195130 9bbb857a generictopologicalsort%b
+=======
+D generictopologicalsort.ads  20191022003100 345d1f03 generictopologicalsort%s
+D generictopologicalsort.adb  20191022003526 ebb3e48a generictopologicalsort%b
+>>>>>>> Stashed changes
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041258 32a08138 system%s
@@ -63,14 +74,15 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 G a e
-G c Z s b [generictopologicalsort standard 8 9 none]
+G c Z s b [generictopologicalsort standard 11 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 17|1r6 2r6 3r5 4r6 19r35 20r28 21r28 22r29
+16K9*Ada 20e8 16|1r6 2r6 3r5 4r6 17|16r35 17r28 18r29 27r7 28r7 66r10
 X 7 a-string.ads
-16K13*Strings 35e16 17|1r10
+16K13*Strings 35e16 16|1r10
 X 8 a-strfix.ads
-43K21*Fixed 596e22 17|1w18
+43K21*Fixed 596e22 16|1w18
 X 11 a-textio.ads
+<<<<<<< Updated upstream
 57K13*Text_IO 727e16 17|2w10 3r9 22r33
 264U14*New_Line 17|39s7 42s7 97s13 100s13
 465U14*Put 17|37s7 40s7
@@ -78,9 +90,27 @@ X 11 a-textio.ads
 X 13 a-tiinio.ads
 46k21*Integer_IO 108e27 17|22r41
 59U14 Get 17|38s17[22] 41s17[22]
+=======
+57K13*Text_IO 727e16 16|2w10 3r9 17|18r33 27r11 28r11 66r14
+64P9*File_Type 16|9r29 17|25r16
+66n23*In_File{66E9} 17|27r44
+66n32*Out_File{66E9} 17|28r44
+114U14*Open 17|27s19 28s19
+115p7 File{64P9} 17|27r24 28r24
+116e7 Mode{66E9} 17|27r36 28r36
+117a7 Name{string} 17|27r53 28r54
+129U14*Close 17|66s22
+264U14*New_Line 17|81s10
+492V13*Get_Line{string} 17|30s27 31s37 46s43
+498U14*Put_Line 17|55s19 80s10 100s13 101s13 103s13 104s13 105s13 138s13
+X 13 a-tiinio.ads
+46k21*Integer_IO 108e27 17|18r41
+68U14 Put 17|83s23[18] 140s26[18]
+>>>>>>> Stashed changes
 X 15 a-unccon.ads
-20v14*Unchecked_Conversion 17|4w10 19r39 20r32 21r32
+20v14*Unchecked_Conversion 16|4w10 17|16r39 17r32
 X 16 generictopologicalsort.ads
+<<<<<<< Updated upstream
 2+9 SortElement 5r32 5r52 6r32 17|10r12 20r53 21r62 25r29
 5V18 get{2+9} 5<22 17|57s26 60s26
 5*22 Job{2+9}
@@ -123,4 +153,57 @@ X 17 generictopologicalsort.adb
 69i14 K{integer} 70r30 71r42 72r21
 102i17 K{integer} 103r30
 109i14 K{integer} 110r34 111r27 113r57
+=======
+6+9 SortElement 8r53 9r49 17|7r12 17r53 21r29
+8U19 getJobs 8<27 8<38 8>66 17|46s13
+8*27 Precedent{6+9}
+8*38 Successor{6+9}
+8a66 Current_Line{string}
+9U19 put 9>23 9>40
+9p23 file{11|64P9}
+9*40 Job{6+9}
+11k9*GenericTopologicalSort 6z9 8z19 9z19 13l5 13e27 17|2b14 148l5 148t27
+12U14*TopologicalSort 12>30 12>41 17|20b14 147l8 147t23
+12a30 inputFile{string} 17|20b30 27r61
+12a41 outputFile{string} 17|20b41 28r62
+X 17 generictopologicalsort.adb
+4R9 Node 5r31 6c9 9e14 62r27
+5P9 NodePointer(4R9) 8r13 13r12 16r69 22r12
+7*7 Suc{16|6+9} 53r31 62m33 88r42 88r83 89r45 90r57 91r36 115r48 116r48
+8p7 Next{5P9} 57r27 62m51 93r27 119r33
+11R9 JobElement 14e14 34r41
+12i7 Count{integer} 40m30 61m50 61r93 70m27 72r33 73m33 77r32 88m48 88r89
+. 89r51 90m36 95r35 107m33 115r54 116m54 126r36 133r38 142r38
+13p7 Top{5P9} 41m30 50r54 62r93 63m50 85r37 86m30 112r40 113m33 132m33 134r43
+. 139r36 141m33
+16V13 Integer_To_Ptr[15|20]{5P9} 86s37 87s26 113s40 114s29 118s29 132s40
+. 134s50 139s43 141s40
+17V13 SEtoint[15|20]{integer} 50s34 53s19 53s38 61s30 61s73 62s73 63s30 88s30
+. 88s71 89s33 90s45 91s24 115s36 116s36
+18K12 IntegerIO[13|46] 83r13 140r16
+21*7 Precedent{16|6+9} 46m21 50r42 62r81 63r38
+21*18 Successor{16|6+9} 46m32 53r46 61r38 61r81 62r40
+22p7 Ptr{5P9} 50m13 52r19 53r27 57m16 57r23 62m16 63r57 85m13 87r19 88r38
+. 88r79 89r41 90r53 91r32 93m16 93r23 112m16 114r22 115r44 116r44 118r22
+. 119m22 119r29
+23i7 F{integer} 77m10 82r16 83r31 85r34 86r27 95m13 95r32
+23i10 R{integer} 69m10 73r30 74m16 90r33 91m19
+23i13 Y{integer} 125m13 126r33 127m16 127r21 132r30 133m16 133r35 134r40
+. 139r33 140r34 141r30 142m16 142r35
+23i16 NA{integer} 30m7 34r34 35r25 39r22 71r22 106r25 111r25
+23i20 numRelations{integer} 31m7 45r22
+24b7 dupe{boolean} 51m13 54m19 60r16
+25p7 f1{11|64P9} 27m32 27r32 30r36 31r46 46r52 66m28 66r28
+25p11 f2{11|64P9} 28m32 28r32 55r28 80r19 83r27 100r22 101r22 103r22 104r22
+. 105r22 138r22 140r30
+34a10 SortStructure(11R9) 40m13 41m13 50r20 61m16 61r59 62r59 63m16 70m10
+. 72r16 73m16 77r15 85r20 86m13 88m16 88r57 89r19 90m19 95r18 107m16 112r23
+. 113m16 115r22 116m22 126r19 132m16 133r21 134r26 139r19 141m16 142r21
+35i10 KN{integer} 84m13 84r19 99r13
+39i14 K{integer} 40r27 41r27
+45i14 J{integer}
+71i14 K{integer} 72r30 73r42 74r21
+106i17 K{integer} 107r30
+111i17 K{integer} 112r37 113r30 116r63
+>>>>>>> Stashed changes
 

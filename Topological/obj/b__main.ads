@@ -37,7 +37,11 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
+<<<<<<< Updated upstream
    u00001 : constant Version_32 := 16#8bfce4d7#;
+=======
+   u00001 : constant Version_32 := 16#74f175a9#;
+>>>>>>> Stashed changes
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -307,13 +311,17 @@ package ada_main is
    pragma Export (C, u00134, "system__val_unsB");
    u00135 : constant Version_32 := 16#33208002#;
    pragma Export (C, u00135, "system__val_unsS");
+<<<<<<< Updated upstream
    u00136 : constant Version_32 := 16#effdcd9c#;
+=======
+   u00136 : constant Version_32 := 16#dfeefb89#;
+>>>>>>> Stashed changes
    pragma Export (C, u00136, "generictopologicalsortB");
-   u00137 : constant Version_32 := 16#52ff06c5#;
+   u00137 : constant Version_32 := 16#12e45120#;
    pragma Export (C, u00137, "generictopologicalsortS");
-   u00138 : constant Version_32 := 16#063cc027#;
+   u00138 : constant Version_32 := 16#9147a7fc#;
    pragma Export (C, u00138, "myioB");
-   u00139 : constant Version_32 := 16#4fcf3226#;
+   u00139 : constant Version_32 := 16#710927e4#;
    pragma Export (C, u00139, "myioS");
    u00140 : constant Version_32 := 16#1281634d#;
    pragma Export (C, u00140, "mytypesB");
