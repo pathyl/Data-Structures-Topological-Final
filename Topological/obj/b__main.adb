@@ -27,13 +27,9 @@ package body ada_main is
    E116 : Short_Integer; pragma Import (Ada, E116, "system__finalization_root_E");
    E114 : Short_Integer; pragma Import (Ada, E114, "ada__finalization_E");
    E113 : Short_Integer; pragma Import (Ada, E113, "system__file_io_E");
-   E147 : Short_Integer; pragma Import (Ada, E147, "system__storage_pools_E");
-   E143 : Short_Integer; pragma Import (Ada, E143, "system__finalization_masters_E");
    E109 : Short_Integer; pragma Import (Ada, E109, "ada__text_io_E");
-   E149 : Short_Integer; pragma Import (Ada, E149, "system__pool_global_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "generictopologicalsort_E");
    E139 : Short_Integer; pragma Import (Ada, E139, "myio_E");
-   E141 : Short_Integer; pragma Import (Ada, E141, "mytypes_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -44,40 +40,19 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E141 := E141 - 1;
+      E109 := E109 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "mytypes__finalize_spec");
+         pragma Import (Ada, F1, "ada__text_io__finalize_spec");
       begin
          F1;
       end;
-      E149 := E149 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "system__pool_global__finalize_spec");
-      begin
-         F2;
-      end;
-      E109 := E109 - 1;
-      declare
-         procedure F3;
-         pragma Import (Ada, F3, "ada__text_io__finalize_spec");
-      begin
-         F3;
-      end;
-      E143 := E143 - 1;
-      declare
-         procedure F4;
-         pragma Import (Ada, F4, "system__finalization_masters__finalize_spec");
-      begin
-         F4;
-      end;
-      declare
-         procedure F5;
-         pragma Import (Ada, F5, "system__file_io__finalize_body");
+         pragma Import (Ada, F2, "system__file_io__finalize_body");
       begin
          E113 := E113 - 1;
-         F5;
+         F2;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -223,21 +198,11 @@ package body ada_main is
       E114 := E114 + 1;
       System.File_Io'Elab_Body;
       E113 := E113 + 1;
-      System.Storage_Pools'Elab_Spec;
-      E147 := E147 + 1;
-      System.Finalization_Masters'Elab_Spec;
-      System.Finalization_Masters'Elab_Body;
-      E143 := E143 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E109 := E109 + 1;
-      System.Pool_Global'Elab_Spec;
-      E149 := E149 + 1;
       E137 := E137 + 1;
       E139 := E139 + 1;
-      mytypes'elab_spec;
-      mytypes'elab_body;
-      E141 := E141 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -273,20 +238,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-<<<<<<< Updated upstream
-   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\generictopologicalsort.o
-   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\myio.o
-   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\mytypes.o
-   --   C:\Users\patri\Data-Structures-Topological-C\Topological\obj\main.o
-   --   -LC:\Users\patri\Data-Structures-Topological-C\Topological\obj\
-   --   -LC:\Users\patri\Data-Structures-Topological-C\Topological\obj\
-=======
    --   C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\generictopologicalsort.o
    --   C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\myio.o
    --   C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\main.o
    --   -LC:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\
    --   -LC:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\
->>>>>>> Stashed changes
    --   -LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
    --   -static
    --   -lgnat

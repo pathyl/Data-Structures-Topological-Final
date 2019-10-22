@@ -19,11 +19,7 @@ RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-<<<<<<< Updated upstream
-U generictopologicalsort%b  generictopologicalsort.adb  effdcd9c NE OO PK GE
-=======
 U generictopologicalsort%b  generictopologicalsort.adb  dfeefb89 NE OO PK GE
->>>>>>> Stashed changes
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
@@ -51,13 +47,8 @@ D a-tiinau.ads		20190518041256 8114c8e4 ada.text_io.integer_aux%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20190518041256 df9cd7af ada.text_io.integer_io%b
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-<<<<<<< Updated upstream
-D generictopologicalsort.ads  20191020172936 52ff06c5 generictopologicalsort%s
-D generictopologicalsort.adb  20191020195130 9bbb857a generictopologicalsort%b
-=======
 D generictopologicalsort.ads  20191022003100 345d1f03 generictopologicalsort%s
 D generictopologicalsort.adb  20191022003526 ebb3e48a generictopologicalsort%b
->>>>>>> Stashed changes
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041258 32a08138 system%s
@@ -82,15 +73,6 @@ X 7 a-string.ads
 X 8 a-strfix.ads
 43K21*Fixed 596e22 16|1w18
 X 11 a-textio.ads
-<<<<<<< Updated upstream
-57K13*Text_IO 727e16 17|2w10 3r9 22r33
-264U14*New_Line 17|39s7 42s7 97s13 100s13
-465U14*Put 17|37s7 40s7
-508U14*Put_Line 17|56s13 59s13 98s13 101s13 134s10
-X 13 a-tiinio.ads
-46k21*Integer_IO 108e27 17|22r41
-59U14 Get 17|38s17[22] 41s17[22]
-=======
 57K13*Text_IO 727e16 16|2w10 3r9 17|18r33 27r11 28r11 66r14
 64P9*File_Type 16|9r29 17|25r16
 66n23*In_File{66E9} 17|27r44
@@ -106,54 +88,9 @@ X 13 a-tiinio.ads
 X 13 a-tiinio.ads
 46k21*Integer_IO 108e27 17|18r41
 68U14 Put 17|83s23[18] 140s26[18]
->>>>>>> Stashed changes
 X 15 a-unccon.ads
 20v14*Unchecked_Conversion 16|4w10 17|16r39 17r32
 X 16 generictopologicalsort.ads
-<<<<<<< Updated upstream
-2+9 SortElement 5r32 5r52 6r32 17|10r12 20r53 21r62 25r29
-5V18 get{2+9} 5<22 17|57s26 60s26
-5*22 Job{2+9}
-6U19 put 6>23 17|80s13 136s13
-6*23 Job{2+9}
-8k9*GenericTopologicalSort 2z9 5z18 6z19 11l5 11e27 17|5b14 146l5 146t27
-9U14*TopologicalSort 17|24b14 145l8 145t23
-X 17 generictopologicalsort.adb
-7R9 Node 8r31 9c9 12e14 62r24
-8P9 NodePointer(7R9) 11r13 16r12 19r69 26r12
-10*7 Suc{16|2+9} 62m30 85r42 85r83 86r45 87r57 88r36 112r80 113r42
-11p7 Next{8P9} 62m48 90r27 115r30
-14R9 JobElement 17e14 44r41
-15i7 Count{integer} 51m30 61m47 61r90 68m27 70r33 71m33 75r32 85m48 85r89
-. 86r51 87m36 92r35 103m33 112r86 113m48 123r33 130r35 138r35
-16p7 Top{8P9} 52m30 62r90 63m47 82r37 83m30 110r37 111m30 128r33 129m30 135r33
-. 137m30
-19V13 Integer_To_Ptr[15|20]{8P9} 83s37 84s26 111s37 112s27 114s26 128s40
-. 129s37 135s40 137s37
-20V13 SEtoint[15|20]{integer} 61s27 61s70 62s70 63s27 85s30 85s71 86s33 87s45
-. 88s24 112s68 113s30
-21V13 inttoSE[15|20]{16|2+9} 80s17 136s17
-22K12 IntegerIO[13|46] 38r7 41r7
-25*7 Precedent{16|2+9} 57m13 57m30 57r30 62r78 63r35
-25*18 Successor{16|2+9} 60m13 60m30 60r30 61r35 61r78 62r37
-26p7 Ptr{8P9} 62m13 63r54 82m13 84r19 85r38 85r79 86r41 87r53 88r32 90m16
-. 90r23 110m13 112r20 112r76 113r38 114r19 115m19 115r26
-29i7 NA{integer} 38m21 44r34 50r22 69r22 102r25 109r22
-30i7 numRelations{integer} 41m21 45r25 55r22
-31i7 F{integer} 75m10 79r16 80r25 82r34 83r27 92m13 92r32
-31i10 R{integer} 67m10 71r30 72m16 87r33 88m19
-31i13 Y{integer} 122m10 123r30 124m13 124r18 128r30 129r27 130m13 130r32
-. 135r30 136r25 137r27 138m13 138r32
-44a10 SortStructure(14R9) 51m13 52m13 61m13 61r56 62r56 63m13 68m10 70r16
-. 71m16 75r15 82r20 83m13 85m16 85r57 86r19 87m19 92r18 103m16 110r20 111m13
-. 112r54 113m16 123r16 128r16 129m13 130r18 135r16 137m13 138r18
-45i10 KN{integer} 81m13 81r19 96r13
-50i14 K{integer} 51r27 52r27
-55i14 J{integer}
-69i14 K{integer} 70r30 71r42 72r21
-102i17 K{integer} 103r30
-109i14 K{integer} 110r34 111r27 113r57
-=======
 6+9 SortElement 8r53 9r49 17|7r12 17r53 21r29
 8U19 getJobs 8<27 8<38 8>66 17|46s13
 8*27 Precedent{6+9}
@@ -205,5 +142,4 @@ X 17 generictopologicalsort.adb
 71i14 K{integer} 72r30 73r42 74r21
 106i17 K{integer} 107r30
 111i17 K{integer} 112r37 113r30 116r63
->>>>>>> Stashed changes
 

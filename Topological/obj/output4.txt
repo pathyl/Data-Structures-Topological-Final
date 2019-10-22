@@ -12,16 +12,5 @@ Enter the task J in the relation J < K
 Enter the task K in the relation J < K
 Enter the task J in the relation J < K
 Enter the task K in the relation J < K
-Enter the task J in the relation J < K
-Enter the task K in the relation J < K
-Attempting to sort
-
-          1          6          2
-Failed to complete a solution!
-Loop detected.
-In 8 Loop
-In 8 Loop
-In 8 Loop
-In 8 Loop
-Printing offending loop
-          1          6          2          0
+          1          6          2          3          4          5
+Completed a solution!

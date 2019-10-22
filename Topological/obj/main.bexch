@@ -4,16 +4,9 @@ b__main.o
 C:\Users\patri\Data-Structures-Topological-C-types\Topological\topological.gpr
 20191021200110
 [BOUND OBJECT FILES]
-<<<<<<< Updated upstream
-C:\Users\patri\Data-Structures-Topological-C\Topological\obj\generictopologicalsort.o
-C:\Users\patri\Data-Structures-Topological-C\Topological\obj\myio.o
-C:\Users\patri\Data-Structures-Topological-C\Topological\obj\mytypes.o
-C:\Users\patri\Data-Structures-Topological-C\Topological\obj\main.o
-=======
 C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\generictopologicalsort.o
 C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\myio.o
 C:\Users\patri\Data-Structures-Topological-C-types\Topological\obj\main.o
->>>>>>> Stashed changes
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb

@@ -1,7 +1,2 @@
-<<<<<<< Updated upstream
-main.adb:19:04: warning: in instantiation at generictopologicalsort.adb:19
-main.adb:19:04: warning: types for unchecked conversion have different sizes
-=======
 main.adb:6:04: warning: in instantiation at generictopologicalsort.adb:16
 main.adb:6:04: warning: types for unchecked conversion have different sizes
->>>>>>> Stashed changes
